@@ -25,7 +25,7 @@ function App() {
 
   return ( 
     <>
-    
+    <WelcomeMessage/>
       <div>
         <UserProfile/>
         <WelcomeMessage/>
