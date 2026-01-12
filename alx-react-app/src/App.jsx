@@ -12,6 +12,8 @@ function App() {
   return (
     <div>
       <WelcomeMessage />
+      <UserProfile/>
+      <Footer />
     </div>
   );
 }
@@ -22,8 +24,8 @@ function App() {
       <WelcomeMessage/>
       <Header />
       <MainContent />
-      <Footer />
-      <UserProfile/>
+      
+      
     </>
   );
 }
