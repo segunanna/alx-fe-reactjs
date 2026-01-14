@@ -2,33 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import WelcomeMessage from ".WelcomeMessage"
-import Header from "./Header"
-import MainContent from "./MainContent"
-import Footer from "./Footer"
-import UserProfile from ".UserProfile";
-
-function App() {
-  return (
-    <div>
-      <WelcomeMessage />
-      <UserProfile/>
-      <Footer />
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <>
-      <WelcomeMessage/>
-      <Header />
-      <MainContent />
-      
-      
-    </>
-  );
-}
+import WelcomeMessage from './WelcomeMessage'
+import Header from './Header'
+import UserProfile from './UserProfile'
+import MainContent from './MainContent'
+import Footer from './Footer'
 
 function App() {
   const [count, setCount, UserProfile] = useState(0)
@@ -37,6 +15,10 @@ function App() {
     <>
       <div>
         <WelcomeMessage/>
+        <Header />
+         <UserProfile/>
+         <MainContent />
+         <Footer />
     
 
           <a href="https://vite.dev" target="_blank">
@@ -61,5 +43,13 @@ function App() {
     </>
   )
 }
+const UserProfile = ({ name, age, bio }) => {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>Age: {age}</p>
+      <p>Bio: {bio}</p>
+    </div>
+  );
+};
 
-export default App

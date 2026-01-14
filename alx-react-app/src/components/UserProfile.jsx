@@ -1,9 +1,22 @@
 const UserProfile = (props) => {
-   return (
-     <div>
-       <h2>Anna Segun</h2>
-       <p>Age: 23 years old</p>
-       <p>Bio: I am studying Software Engineering at ALX</p>
-     </div>
-   );
- };
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <p>Age: {props.age}</p>
+      <p>Bio: {props.bio}</p>
+    </div>
+  );
+};
+
+ function UserProfile() {
+  return (
+    <div>
+      <h2>Alice </h2>
+       <p>Age: 25 </p>
+       <p>Bio: Loves hiking and photography </p>
+    </div>
+  );
+}
+
+
+export default UserProfile;
