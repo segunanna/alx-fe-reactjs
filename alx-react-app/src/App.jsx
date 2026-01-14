@@ -2,9 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import WelcomeMessage from './WelcomeMessage'
+import WelcomeMessage from "./WelcomeMessage"
 import Header from './Header'
-import UserProfile from './UserProfile'
+import './UserProfile'
 import MainContent from './MainContent'
 import Footer from './Footer'
 
@@ -13,12 +13,13 @@ function App() {
 
   return ( 
     <>
+    <WelcomeMessage />
       <div>
-        <WelcomeMessage/>
+        <WelcomeMessage />
         <Header />
-         <UserProfile/>
-         <MainContent />
-         <Footer />
+        <UserProfile />
+        <MainContent />
+        <Footer />
     
 
           <a href="https://vite.dev" target="_blank">
