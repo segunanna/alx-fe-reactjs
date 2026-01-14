@@ -9,11 +9,13 @@ import MainContent from './MainContent'
 import Footer from './Footer'
 
 function App() {
-  const [count, setCount, UserProfile] = useState(0)
+  const [count, setCount] = useState(0)
+  const [UserProfile] = (props)
   
   return ( 
     <>
     <WelcomeMessage />
+    <App/>
     <h1 UserProfile>User profiles</h1>
     <UserProfile
       name="Alice"
