@@ -10,14 +10,18 @@ import Footer from './Footer'
 
 function App() {
   const [count, setCount, UserProfile] = useState(0)
-
+  
   return ( 
     <>
     <WelcomeMessage />
+    <h1 UserProfile>User profiles</h1>
+    <UserProfile
+      name="Alice"
+      age="25"
+      bio="Loves hiking and photography"/>
       <div>
-        <WelcomeMessage />
+
         <Header />
-        <UserProfile />
         <MainContent />
         <Footer />
     
@@ -44,13 +48,6 @@ function App() {
     </>
   )
 }
-const UserProfile = ({ name, age, bio }) => {
-  return (
-    <div>
-      <h2>{name}</h2>
-      <p>Age: {age}</p>
-      <p>Bio: {bio}</p>
-    </div>
-  );
-};
+ 
+ 
 
