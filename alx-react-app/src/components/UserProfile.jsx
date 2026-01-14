@@ -20,7 +20,7 @@ const UserProfile = (props) => {
 };
 
 
-function App() {
+function UserProfile() {
   return (
     <div>
       <h1>User Information</h1>
