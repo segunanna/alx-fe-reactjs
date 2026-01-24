@@ -8,23 +8,14 @@ const UserProfile = (props) => {
   );
 };
 
+export default UserProfile;
 
- function UserProfile() {
+function App() {
   return (
     <div>
-      <h2>Alice </h2>
-       <p>Age: 25 </p>
-       <p>Bio: Loves hiking and photography </p>
-    </div>
-  );
-};
+      <h1>User Profiles</h1>
 
-
-function UserProfile() {
-  return (
-    <div>
-      <h1>User Information</h1>
-      <UserProfile
+      <User Profile
         name="Alice"
         age="25"
         bio="Loves hiking and photography"
@@ -33,4 +24,27 @@ function UserProfile() {
   );
 }
 
-export default UserProfile;
+
+import React from 'react'
+
+const App = () => {
+  return (
+    <div><h1>User Profile</h1>
+    <User Profile 
+    name="Alice" 
+    age="25"
+    Bio="Loves hiking and photography"
+    />
+    </div>
+  )
+}
+
+export default App
+
+import React from 'react'
+
+export const UserProfile = () => {
+  return (
+    <div>UserProfile</div>
+  )
+}
