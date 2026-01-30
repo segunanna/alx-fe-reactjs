@@ -1,25 +1,22 @@
-// src/components/RecipeList.jsx
-import useRecipeStore from '../recipeStore';
+import { useRecipeStore } from './recipeStore';
+import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
-  // We select only the recipes to prevent unnecessary re-renders
-  const recipes = useRecipeStore((state) => state.recipes);
-
-  if (recipes.length === 0) {
-    return <p style={{ textAlign: 'center', color: '#666' }}>No recipes yet. Add one below!</p>;
-  }
+  // Use filteredRecipes if search is active
+  const recipes = useRecipeStore(state => 
+    state.searchTerm ? state.filteredRecipes : state.recipes
+  );
 
   return (
-    <div style={{ marginTop: '20px' }}>
-      <h2>Your Recipes</h2>
-      {recipes.map((recipe) => (
-        <div key={recipe.id} style={{ borderBottom: '1px solid #ddd', padding: '10px 0' }}>
-          <h3 style={{ margin: '0 0 5px 0' }}>{recipe.title}</h3>
-          <p style={{ margin: 0, color: '#555' }}>{recipe.description}</p>
+    <div>
+      {recipes.map(recipe => (
+        <div key={recipe.id}>
+          <h3>{recipe.title}</h3>
+          <p>{recipe.description}</p>
+          <Link to={`/recipe/${recipe.id}`}>View Details</Link>
         </div>
       ))}
     </div>
   );
 };
-
 export default RecipeList;
